@@ -1,11 +1,12 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "independent",
+  "packages": ["packages/*"],
   "ignoreChanges": ["**/**.md", "**/spec**", "**/test**"],
-  "packages": [
-    "packages/*"
-  ],
   "command": {
+    "publish": {
+      "registry": "https://npm.pkg.github.com/"
+    },
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,
