@@ -1,5 +1,5 @@
 {
-  "name": "code-harmony",
+  "name": "code-harmony-kit",
   "private": false,
   "version": "1.0.0",
   "description": "Your one-stop repository for unified, hassle-free configurations of Prettier, ESLint, TSConfig, and Jest. Simplify development, ensure consistency, and streamline collaboration effortlessly.",
