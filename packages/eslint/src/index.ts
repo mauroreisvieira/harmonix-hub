@@ -4,115 +4,34 @@ import type { Linter } from "eslint";
  * Eslint configuration object extending the most performant and
  * commonly used configurations, it alo has some overrides to prevent conflicts with prettier
  */
-
 const config: Linter.Config = {
-  // eslint-disable-next-line unicorn/prevent-abbreviations
   env: {
-    browser: true,
     es2021: true,
     node: true,
+    jest: true,
   },
   extends: [
-    // https://www.npmjs.com/package/eslint-plugin-import
-    "plugin:import/recommended",
-    // https://www.npmjs.com/package/eslint-plugin-workspaces
-    "plugin:workspaces/recommended",
-    // https://www.npmjs.com/package/eslint-plugin-prettier
-    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
   ],
-  rules: {
-    "tsdoc/syntax": "warn",
-    // Sync with linters, formatters, git and editor configs
-    // Prevent git changes caused from contributors using different OS's
-    "linebreak-style": ["error", "unix"],
-    // Sync with linters, formatters and editor configs
-    "max-len": [
-      "error",
-      {
-        code: 100,
-        ignoreComments: true,
-        ignoreStrings: true,
-      },
-    ],
-  },
   parserOptions: {
-    ecmaVersion: "latest",
     sourceType: "module",
+    ecmaVersion: 2020,
   },
-  overrides: [
-    {
-      files: ["**/*.test.ts*"],
-      plugins: ["jest"],
-      extends: ["plugin:jest/recommended"],
-    },
-    {
-      files: ["**/*.ts*"],
-      plugins: ["eslint-plugin-tsdoc"],
-      extends: [
-        // https://www.npmjs.com/package/eslint-config-xo
-        "xo",
-        // https://www.npmjs.com/package/eslint-config-xo
-        "xo/browser",
-        // https://www.npmjs.com/package/eslint-config-xo-react
-        "xo-react",
-        // https://www.npmjs.com/package/eslint-config-typescript
-        "xo-typescript",
-        // https://www.npmjs.com/package/eslint-config-ts-important-stuff
-        "ts-important-stuff",
-        // https://www.npmjs.com/package/eslint-config-ts-react-important-stuff
-        "ts-react-important-stuff",
-        // https://www.npmjs.com/package/eslint-config-standard-with-typescript
-        "standard-with-typescript",
-        // https://www.npmjs.com/package/eslint-plugin-etc
-        "plugin:etc/recommended",
-        // https://www.npmjs.com/package/eslint-plugin-unicorn
-        "plugin:unicorn/recommended",
-        // https://www.npmjs.com/package/eslint-plugin-prettier (override plugins above)
-        "plugin:prettier/recommended",
-      ],
-      rules: {
-        // Prefer component arrow functions
-        "react/function-component-definition": [
-          1,
-          {
-            namedComponents: "arrow-function",
-            unnamedComponents: "arrow-function",
-          },
-        ],
-        // Ignore to allow usage of tsconfig aliases
-        "import/no-unresolved": 1,
-        // Allow abbreviations
-        "unicorn/prevent-abbreviations": [
-          1,
-          {
-            checkProperties: true,
-            allowList: {
-              db: true,
-              param: true,
-              params: true,
-              props: true,
-              Props: true,
-            },
-          },
-        ],
-        "@typescript-eslint/strict-boolean-expressions": 1,
-        "unicorn/filename-case": [
-          1,
-          {
-            cases: {
-              kebabCase: true,
-              pascalCase: true,
-            },
-          },
-        ],
-        "react/button-has-type": 1,
-        "no-implicit-coercion": 1,
-        "unicorn/no-array-reduce": 1,
-        "unicorn/no-array-for-each": 1,
-        "capitalized-comments": 1,
-      },
-    },
-  ],
+  plugins: ["@typescript-eslint/eslint-plugin", "@typescript-eslint", "react-hooks", "prettier"],
+  rules: {
+    "react/jsx-key": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/self-closing-comp": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+  },
   ignorePatterns: ["dist"],
 };
 

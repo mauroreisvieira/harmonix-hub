@@ -2,7 +2,7 @@ import type { Options } from "prettier";
 
 /**
  * Eslint configuration object extending the most performant and
- * commonly used configurations, it alo has some overrides to prevent conflicts with prettier
+ * commonly used configurations, it also has some overrides to prevent conflicts with prettier.
  */
 
 const config: Options = {

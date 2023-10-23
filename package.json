@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "start": "lerna run start --parallel --stream",
-    "build": "lerna run build",
+    "build": "npm run clean && lerna run build",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "format": "lerna run format",
