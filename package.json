@@ -29,5 +29,8 @@
     "husky": "^8.0.3",
     "lerna": "7.4.1",
     "semantic-release": "^22.0.5"
+  },
+  "optionalDependencies": {
+    "@nrwl/nx-linux-x64-musl": "^17.0.1"
   }
 }
