@@ -1,17 +1,17 @@
 {
   "name": "@code-harmony/eslint",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utilize the ESLint rules to ensure clean and error-free coding practices.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "lint": "eslint . --ext ts",
-    "format": "prettier . --check --cache --ignore-unknown",
+    "lint": "eslint ./src/ --ext ts",
+    "format": "prettier . --check --cache",
     "clean": "rm -rf dist node_modules",
     "test": "jest"
   },

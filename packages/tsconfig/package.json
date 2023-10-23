@@ -1,9 +1,9 @@
 {
   "name": "@code-harmony/tsconfig",
   "version": "1.0.0",
-  "description": "",
+  "description": "Incorporate the provided tsconfig settings for robust TypeScript support tailored to your project.",
   "scripts": {
-    "format": "prettier . --check --cache --ignore-unknown",
+    "format": "prettier . --check --cache",
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {

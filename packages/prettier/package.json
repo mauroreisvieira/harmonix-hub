@@ -1,17 +1,17 @@
 {
   "name": "@code-harmony/prettier",
   "version": "1.0.0",
-  "description": "",
+  "description": "Integrate the Prettier configuration file into your project to maintain consistent code formatting.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "lint": "eslint . --ext ts",
-    "format": "prettier . --check --cache --ignore-unknown",
+    "lint": "eslint --ext ts",
+    "format": "prettier . --check --cache",
     "clean": "rm -rf dist node_modules",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },

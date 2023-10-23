@@ -11,6 +11,7 @@
     "lint": "lerna run lint --parallel",
     "format": "lerna run format",
     "clean": "lerna run clean",
+    "list": "lerna list",
     "postbuild": "lerna run postbuild",
     "publish": "lerna publish --yes"
   },
