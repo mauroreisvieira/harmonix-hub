@@ -1,0 +1,33 @@
+{
+  "name": "@code-harmony/prettier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "start": "tsc -p tsconfig.build.json -w",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint . --ext ts,tsx",
+    "format": "prettier . --check --cache --ignore-unknown",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "clean": "rm -rf dist node_modules"
+  },
+  "devDependencies": {
+    "@code-harmony/eslint": "^1.0.0",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@commitlint/cli": "^18.0.0",
+    "@types/jest": "^29.5.6",
+    "eslint": "^8.52.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  }
+}

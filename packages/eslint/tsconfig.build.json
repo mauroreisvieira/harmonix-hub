@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",
+    "target": "es2016",
+    "module": "commonjs",
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "./dist"
+  },
+  "include": ["./src/index.ts"]
+}

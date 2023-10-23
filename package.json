@@ -1,0 +1,27 @@
+{
+  "name": "code-harmony",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Your one-stop repository for unified, hassle-free configurations of Prettier, ESLint, TSConfig, and Jest. Simplify development, ensure consistency, and streamline collaboration effortlessly.",
+  "scripts": {
+    "prepare": "husky install",
+    "start": "lerna run start --parallel --stream",
+    "build": "lerna run build",
+    "test": "lerna run test --parallel",
+    "lint": "lerna run lint --parallel",
+    "clean": "lerna run clean",
+    "publish": "lerna publish --yes"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "husky": "^8.0.3",
+    "lerna": "^7.4.1",
+    "semantic-release": "^22.0.5"
+  }
+}

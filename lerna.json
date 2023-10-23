@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "0.0.0",
+  "tagVersionPrefix": "package-",
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "changelogPreset": "conventional-changelog-conventionalcommits",
+      "message": "chore(release): packages publish [no ci]"
+    }
+  }
+}
