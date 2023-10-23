@@ -29,6 +29,6 @@
     "semantic-release": "^22.0.5"
   },
   "optionalDependencies": {
-    "@nrwl/nx-linux-x64-musl": "^17.0.1"
+    "@nx/nx-linux-x64-gnu": "^17.0.1"
   }
 }
