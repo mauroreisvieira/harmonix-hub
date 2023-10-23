@@ -16,8 +16,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
-    "@code-harmony/eslint": "^1.0.0",
-    "@code-harmony/tsconfig": "^1.0.0",
+    "@code-harmony/tsconfig": "workspace:*",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
     "@commitlint/cli": "^18.0.0",
@@ -30,5 +29,8 @@
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
+  },
+   "publishConfig": {
+    "access": "public"
   }
 }

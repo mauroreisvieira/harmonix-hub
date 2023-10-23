@@ -6,8 +6,7 @@
     "format": "prettier . --check --cache",
     "clean": "rm -rf dist node_modules"
   },
-  "dependencies": {
-    "@code-harmony/prettier": "^1.0.0",
-    "prettier": "^3.0.3"
+   "publishConfig": {
+    "access": "public"
   }
 }
