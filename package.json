@@ -12,7 +12,8 @@
     "format": "lerna run format",
     "clean": "lerna run clean",
     "postbuild": "lerna run postbuild",
-    "publish": "lerna publish --yes"
+    "publish": "lerna publish --yes",
+    "publish2": "semantic-release"
   },
   "workspaces": [
     "packages/*"

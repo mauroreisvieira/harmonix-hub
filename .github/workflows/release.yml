@@ -25,6 +25,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install Dependencies
@@ -36,8 +37,8 @@ jobs:
       - name: Run Lint
         run: npm run lint
 
-      # - name: Run Tests
-      #   run: npm run test
+      - name: Run Tests
+        run: npm run test
 
       - name: Setup NPM Auth
         run: |
