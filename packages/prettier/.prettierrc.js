@@ -1,4 +1,4 @@
-const baseConfig = require("./dist/index");
+const baseConfig = require("./src/index");
 
 /**
  * https://prettier.io/docs/en/options

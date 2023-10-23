@@ -5,31 +5,29 @@
   "description": "Your one-stop repository for unified, hassle-free configurations of Prettier, ESLint, TSConfig, and Jest. Simplify development, ensure consistency, and streamline collaboration effortlessly.",
   "scripts": {
     "prepare": "husky install",
-    "start": "turbo run start --parallel --stream",
-    "build": "turbo run build",
-    "test": "turbo run test --parallel",
-    "typecheck": "turbo run typecheck",
-    "lint": "turbo run lint --parallel",
-    "format": "turbo run format",
-    "clean": "turbo run clean",
-    "list": "turbo run list",
-    "publish": "turbo publish --yes"
+    "start": "lerna run start --parallel --stream",
+    "build": "lerna run build",
+    "test": "lerna run test --parallel",
+    "lint": "lerna run lint --parallel",
+    "format": "lerna run format",
+    "clean": "lerna run clean",
+    "postbuild": "lerna run postbuild",
+    "publish": "lerna publish --yes",
+    "changeset": "changeset"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@types/cross-spawn": "6.0.4",
+    "cross-spawn": "7.0.3",
+    "@changesets/cli": "2.26.2",
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "husky": "^8.0.3",
-    "turbo": "1.6.3",
+    "lerna": "7.4.1",
     "semantic-release": "^22.0.5"
-  },
-  "engines": {
-    "node": ">=16.x",
-    "pnpm": ">=8.x"
-  },
-  "packageManager": "pnpm@8.7.0"
+  }
 }
