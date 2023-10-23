@@ -1,6 +1,6 @@
 import spawn from "cross-spawn";
 
-spawn.sync("npx", ["changeset", "version"], { stdio: "inherit" });
+spawn.sync("npx", ["version"], { stdio: "inherit" });
 
 spawn.sync(
   "npm",
