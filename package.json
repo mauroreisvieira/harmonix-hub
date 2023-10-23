@@ -10,6 +10,7 @@
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "clean": "lerna run clean",
+    "postbuild": "lerna run postbuild",
     "publish": "lerna publish --yes"
   },
   "workspaces": [

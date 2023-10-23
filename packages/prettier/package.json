@@ -8,8 +8,8 @@
     "dist/**/*"
   ],
   "scripts": {
-    "start": "tsc -p tsconfig.build.json -w",
-    "build": "tsc -p tsconfig.build.json",
+    "start": "tsc -w",
+    "build": "tsc",
     "lint": "eslint . --ext ts,tsx",
     "format": "prettier . --check --cache --ignore-unknown",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@code-harmony/eslint": "^1.0.0",
+    "@code-harmony/tsconfig": "^1.0.0",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
     "@commitlint/cli": "^18.0.0",

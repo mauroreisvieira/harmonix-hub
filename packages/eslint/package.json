@@ -8,15 +8,16 @@
     "dist/**/*"
   ],
   "scripts": {
-    "start": "tsc -p tsconfig.build.json -w",
-    "build": "tsc -p tsconfig.build.json",
+    "start": "tsc -w",
+    "build": "tsc",
     "test": "jest",
-    "lint": "eslint . --ext ts,tsx",
+    "lint": "eslint . --ext ts",
     "format": "prettier . --check --cache --ignore-unknown",
     "clean": "rm -rf dist node_modules"
   },
   "devDependencies": {
     "@code-harmony/prettier": "^1.0.0",
+    "@code-harmony/tsconfig": "^1.0.0",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
     "@types/eslint": "^8.44.6",
