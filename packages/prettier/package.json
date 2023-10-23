@@ -5,15 +5,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist/*"
   ],
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "lint": "eslint . --ext ts,tsx",
+    "lint": "eslint . --ext ts",
     "format": "prettier . --check --cache --ignore-unknown",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "clean": "rm -rf dist node_modules"
+    "clean": "rm -rf dist node_modules",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
     "@code-harmony/eslint": "^1.0.0",

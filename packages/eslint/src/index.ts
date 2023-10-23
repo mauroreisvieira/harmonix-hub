@@ -6,6 +6,7 @@ import type { Linter } from "eslint";
  */
 
 const config: Linter.Config = {
+  // eslint-disable-next-line unicorn/prevent-abbreviations
   env: {
     browser: true,
     es2021: true,
@@ -22,7 +23,7 @@ const config: Linter.Config = {
   rules: {
     "tsdoc/syntax": "warn",
     // Sync with linters, formatters, git and editor configs
-    // prevent git changes caused from contributors using different OS's
+    // Prevent git changes caused from contributors using different OS's
     "linebreak-style": ["error", "unix"],
     // Sync with linters, formatters and editor configs
     "max-len": [
@@ -48,6 +49,14 @@ const config: Linter.Config = {
       files: ["**/*.ts*"],
       plugins: ["eslint-plugin-tsdoc"],
       extends: [
+        // https://www.npmjs.com/package/eslint-config-xo
+        "xo",
+        // https://www.npmjs.com/package/eslint-config-xo
+        "xo/browser",
+        // https://www.npmjs.com/package/eslint-config-xo-react
+        "xo-react",
+        // https://www.npmjs.com/package/eslint-config-typescript
+        "xo-typescript",
         // https://www.npmjs.com/package/eslint-config-ts-important-stuff
         "ts-important-stuff",
         // https://www.npmjs.com/package/eslint-config-ts-react-important-stuff

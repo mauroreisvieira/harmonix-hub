@@ -18,6 +18,4 @@ Feel free to submit issues or pull requests to help us improve Code Harmony and 
 
 ## License
 
-## License
-
 This project is licensed under the _MIT License_ - see the [LICENSE.md](./LICENSE.md) file for details.

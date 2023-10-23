@@ -9,6 +9,7 @@
     "build": "lerna run build",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
+    "format": "lerna run format",
     "clean": "lerna run clean",
     "postbuild": "lerna run postbuild",
     "publish": "lerna publish --yes"
