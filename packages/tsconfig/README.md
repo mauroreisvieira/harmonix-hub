@@ -22,7 +22,7 @@ Example of `tsconfig.json` configuration file:
 {
   "extends": "@harmonix-hub/tsconfig/base.json",
   "compilerOptions": {
-    // Add additional project-specific TypeScript compiler options here
+    "declaration": true
   },
   "include": [
     "src/**/*.ts",

@@ -1,12 +1,7 @@
 {
-  "extends": "@harmonix-hub/tsconfig/base.json",
+  "extends": "@harmonix-hub/tsconfig/library.json",
   "compilerOptions": {
-    "incremental": true,
     "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",
-    "target": "ES5",
-    "module": "CommonJS",
-    "declaration": true,
-    "noEmit": false,
     "outDir": "./dist"
   },
   "include": ["./src/index.ts"]

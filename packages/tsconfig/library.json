@@ -1,0 +1,11 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES5",
+    "module": "CommonJS",
+    "declaration": true,
+    "noEmit": false
+  },
+  "include": ["next-env.d.ts"]
+}
