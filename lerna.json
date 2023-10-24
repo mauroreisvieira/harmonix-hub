@@ -2,7 +2,6 @@
   "packages": ["packages/**"],
   "version": "independent",
   "npmClient": "npm",
-  "useWorkspaces": true,
   "registry": "https://registry.npmjs.org/",
   "ignoreChanges": ["**/*.md", "**/*.test.js"],
   "allowBranch": ["main", "next"],
