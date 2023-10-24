@@ -45,6 +45,10 @@ jobs:
           echo "//registry.npmjs.org :_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
           echo "access=public" >> .npmrc
 
+      - name: Publish packages to NPM
+        run: lerna publish from-package --yes # This command will publish packages to npm
+
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
