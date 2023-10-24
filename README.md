@@ -1,8 +1,10 @@
-# Harmony Configs
+# Harmonix Hub
 
-_Harmony_ Configs is your central hub for streamlined and consistent development configurations.
+_Harmonix Hub_ is a centralized configuration repository designed to bring harmony to your development environment.
 
-This repository provides carefully crafted settings for Prettier, ESLint, Stylelint, TSConfig, and Jest, ensuring a harmonious coding experience across your projects.
+Inside _Harmonix Hub_, you'll find meticulously curated settings for various tools, including Prettier, ESLint, TSConfig, and Jest.
+
+Our goal is to streamline your workflow, ensuring consistency and collaboration across projects.
 
 ## Features
 
