@@ -1,13 +1,18 @@
 {
-  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-  "version": "0.0.0",
-  "tagVersionPrefix": "package-",
+  "packages": ["packages/**"],
+  "version": "independent",
+  "npmClient": "npm",
+  "registry": "https://registry.npmjs.org/",
+  "ignoreChanges": ["**/*.md", "**/*.test.js"],
+  "allowBranch": ["main", "next"],
   "command": {
+    "publish": {
+      "message": "chore(release): packages publish",
+      "includeMergedTags": true
+    },
     "version": {
-      "allowBranch": "master",
       "conventionalCommits": true,
-      "changelogPreset": "conventional-changelog-conventionalcommits",
-      "message": "chore(release): packages publish [no ci]"
+      "changelogPreset": "conventional-changelog-conventionalcommits"
     }
   }
 }
