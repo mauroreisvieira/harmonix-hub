@@ -1,6 +1,6 @@
 # @harmonix-hub/prettier
 
-This package provides Prettier configurations for projects developed with Code Harmony Kit.
+This package provides Prettier configurations for projects developed with Harmonix hub.
 
 ## Installation
 
@@ -23,4 +23,4 @@ module.exports = {
 };
 ```
 
-By extending `@harmonix-hub/prettier`, you inherit the recommended Prettier configurations for Code Harmony Kit projects. You can also add or override configurations in your project-specific Prettier configuration file.
+By extending `@harmonix-hub/prettier`, you inherit the recommended Prettier configurations for Harmonix hub projects. You can also add or override configurations in your project-specific Prettier configuration file.

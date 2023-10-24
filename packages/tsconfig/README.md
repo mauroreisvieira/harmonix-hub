@@ -1,6 +1,6 @@
 # @harmonix-hub/tsconfig
 
-This package provides TypeScript configurations for projects developed with Code Harmony Kit.
+This package provides TypeScript configurations for projects developed with Harmonix hub.
 
 ## Installation
 
@@ -31,4 +31,4 @@ Example of `tsconfig.json` configuration file:
 }
 ```
 
-By extending `@harmonix-hub/tsconfig`, you inherit the recommended TypeScript compiler options for Code Harmony Kit projects. You can also add or override compiler options in your project-specific TypeScript configuration file.
+By extending `@harmonix-hub/tsconfig`, you inherit the recommended TypeScript compiler options for Harmonix hub projects. You can also add or override compiler options in your project-specific TypeScript configuration file.

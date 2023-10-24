@@ -1,6 +1,6 @@
 # @harmonix-hub/testing
 
-This package provides Jest configurations for projects developed with Code Harmony Kit.
+This package provides Jest configurations for projects developed with Harmonix hub.
 
 ## Installation
 
@@ -23,4 +23,4 @@ module.exports = jestConfig;
 
 ```
 
-By extending `@harmonix-hub/testing`, you inherit the recommended Jest configurations for Code Harmony Kit projects. You can also add or override configurations in your project-specific Jest configuration file.
+By extending `@harmonix-hub/testing`, you inherit the recommended Jest configurations for Harmonix hub projects. You can also add or override configurations in your project-specific Jest configuration file.

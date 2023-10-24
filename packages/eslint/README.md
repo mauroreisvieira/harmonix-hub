@@ -1,6 +1,6 @@
 # @harmonix-hub/eslint
 
-This package provides ESLint configurations for projects developed with Code Harmony Kit.
+This package provides ESLint configurations for projects developed with Harmonix hub.
 
 ## Installation
 
@@ -26,5 +26,5 @@ module.exports = {
 };
 ```
 
-By extending `@harmonix-hub/eslint`, you inherit the recommended ESLint rules for Code Harmony Kit projects.
+By extending `@harmonix-hub/eslint`, you inherit the recommended ESLint rules for Harmonix hub projects.
 You can also add or override rules in your project-specific ESLint configuration file.

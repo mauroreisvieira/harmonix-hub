@@ -2,7 +2,8 @@
   "extends": "@harmonix-hub/tsconfig/library.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",
-    "outDir": "./dist"
+    "outDir": "./dist",
   },
-  "include": ["./src/index.ts"]
+  "include": ["./src/index.ts"],
+  "exclude": ["node_modules"]
 }

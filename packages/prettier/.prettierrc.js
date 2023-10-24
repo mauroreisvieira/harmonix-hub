@@ -1,12 +1,8 @@
-const baseConfig = require("./src/index");
+const { getPrettierConfig } = require("./src/index");
 
-/**
- * https://prettier.io/docs/en/options
- * @type import("prettier").Options
- */
-
+ /** @type {import("prettier").Config} */
 const config = {
-  ...baseConfig,
+  ...getPrettierConfig(),
 };
 
 module.exports = config;

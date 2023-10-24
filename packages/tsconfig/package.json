@@ -1,7 +1,7 @@
 {
   "name": "@harmonix-hub/tsconfig",
   "version": "1.0.0",
-  "description": "",
+  "description": "This package provides TSConfig configurations to ensuring consistency and collaboration across projects",
   "scripts": {
     "format": "prettier . --check --cache --ignore-unknown",
     "clean": "rm -rf dist node_modules"
