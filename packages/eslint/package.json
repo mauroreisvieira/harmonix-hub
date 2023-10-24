@@ -1,5 +1,5 @@
 {
-  "name": "@code-harmony-kit/eslint",
+  "name": "@harmony-configs/eslint",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -16,8 +16,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@code-harmony-kit/prettier": "1.0.0",
-    "@code-harmony-kit/tsconfig": "1.0.0",
+    "@harmony-configs/prettier": "1.0.0",
+    "@harmony-configs/tsconfig": "1.0.0",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
     "@types/eslint": "^8.44.6",

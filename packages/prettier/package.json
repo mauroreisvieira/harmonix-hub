@@ -1,5 +1,5 @@
 {
-  "name": "@code-harmony-kit/prettier",
+  "name": "@harmony-configs/prettier",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -16,7 +16,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
-    "@code-harmony-kit/tsconfig": "1.0.0",
+    "@harmony-configs/tsconfig": "1.0.0",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",

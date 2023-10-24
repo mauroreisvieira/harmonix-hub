@@ -1,5 +1,5 @@
 {
-  "extends": "@code-harmony-kit/tsconfig/base.json",
+  "extends": "@harmony-configs/tsconfig/base.json",
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",

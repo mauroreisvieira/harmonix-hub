@@ -1,8 +1,8 @@
-# Code Harmony Kit
+# Harmony Configs
 
-_Code Harmony Kit_ is your central hub for streamlined and consistent development configurations.
+_Harmony_ Configs is your central hub for streamlined and consistent development configurations.
 
-This repository provides carefully crafted settings for Prettier, ESLint, TSConfig, and Jest, ensuring a harmonious coding experience across your projects.
+This repository provides carefully crafted settings for Prettier, ESLint, Stylelint, TSConfig, and Jest, ensuring a harmonious coding experience across your projects.
 
 ## Features
 
@@ -14,7 +14,7 @@ This repository provides carefully crafted settings for Prettier, ESLint, TSConf
 ## Contributing
 
 Contributions are welcome!
-Feel free to submit issues or pull requests to help us improve Code Harmony Kit and make it even better for the community.
+Feel free to submit issues or pull requests to help us improve Harmony Configs and make it even better for the community.
 
 ## License
 

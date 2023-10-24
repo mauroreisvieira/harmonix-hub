@@ -1,3 +1,3 @@
-const config = require("@code-harmony-kit/prettier");
+const config = require("@harmony-configs/prettier");
 
 module.exports = config;
