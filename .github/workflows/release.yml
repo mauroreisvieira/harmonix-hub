@@ -46,7 +46,7 @@ jobs:
           echo "access=public" >> .npmrc
 
       - name: Publish packages to NPM
-        run: lerna publish from-package --yes # This command will publish packages to npm
+        run: npm run publish
 
 
       - name: Release

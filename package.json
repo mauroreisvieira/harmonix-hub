@@ -1,19 +1,17 @@
 {
   "name": "code-harmony-kit",
   "private": false,
-  "version": "1.0.0",
   "description": "Your one-stop repository for unified, hassle-free configurations of Prettier, ESLint, TSConfig, and Jest. Simplify development, ensure consistency, and streamline collaboration effortlessly.",
   "scripts": {
     "prepare": "husky install",
     "start": "lerna run start --parallel --stream",
     "build": "npm run clean && lerna run build",
+    "postbuild": "lerna run postbuild",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
     "format": "lerna run format",
     "clean": "lerna run clean",
-    "postbuild": "lerna run postbuild",
-    "publish": "lerna publish --yes",
-    "publish2": "semantic-release"
+    "publish": "lerna publish from-package --yes"
   },
   "workspaces": [
     "packages/*"
