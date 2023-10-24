@@ -19,6 +19,7 @@ To use the TypeScript configurations provided by this package, create a TypeScri
 Example of `tsconfig.json` configuration file:
 
 ```json
+{
   "extends": "@code-harmony-kit/tsconfig/base.json",
   "compilerOptions": {
     // Add additional project-specific TypeScript compiler options here
