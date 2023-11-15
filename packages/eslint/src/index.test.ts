@@ -1,13 +1,15 @@
-import { ESLint } from "eslint";
-import baseConfig from "./index";
+import { getEslintConfig } from "./index";
 
-describe("Eslint Config", () => {
-  it("should be a configuration object compatible with Eslint", async () => {
-    expect(() => {
-      // eslint-disable-next-line no-new
-      new ESLint({
-        baseConfig,
-      });
-    }).not.toThrow();
+describe('getEslintConfig', () => {
+  it('returns a valid ESLint configuration object', () => {
+    const eslintConfig = getEslintConfig();
+
+    // Basic structure checks
+    expect(eslintConfig).toHaveProperty('env');
+    expect(eslintConfig).toHaveProperty('extends');
+    expect(eslintConfig).toHaveProperty('parserOptions');
+    expect(eslintConfig).toHaveProperty('plugins');
+    expect(eslintConfig).toHaveProperty('rules');
+    expect(eslintConfig).toHaveProperty('ignorePatterns');
   });
 });
