@@ -2,7 +2,7 @@
 
 _Harmonix Hub_ is a centralized configuration repository designed to bring harmony to your development environment.
 
-Inside _Harmonix Hub_, you'll find meticulously curated settings for various tools, including Prettier, ESLint, TSConfig, and Jest.
+Inside _Harmonix Hub_, you'll find meticulously curated settings for various tools, including Prettier, ESLint, Stylelint, TSConfig, and Jest.
 
 Our goal is to streamline your workflow, ensuring consistency and collaboration across projects.
 
