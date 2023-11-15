@@ -1,13 +1,8 @@
-const { getEslintConfig } = require("./dist/index");
+const { getEslintConfig } = require("@harmonix-hub/eslint");
 
 const baseConfig = getEslintConfig();
 
 /** @type import("eslint").Linter.Config */
-const config = {
+module.exports = {
   ...baseConfig,
-  parserOptions: {
-    ...baseConfig.parserOptions,
-  },
 };
-
-module.exports = config;

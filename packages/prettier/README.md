@@ -20,7 +20,7 @@ Example of `.prettierrc.js` configuration file:
 const { getPrettierConfig } = require("@harmonix-hub/prettier");
 
  /** @type {import("prettier").Config} */
-module.exports {
+module.exports = {
   ...getPrettierConfig(),
 };
 ```

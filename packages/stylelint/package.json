@@ -16,6 +16,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@harmonix-hub/eslint": "1.0.1",
     "@harmonix-hub/prettier": "1.0.1",
     "@harmonix-hub/tsconfig": "1.0.1",
     "@harmonix-hub/testing": "1.0.1",
