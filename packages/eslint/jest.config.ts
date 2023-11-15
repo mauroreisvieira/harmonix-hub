@@ -1,6 +1,4 @@
-const { Jest } = require("@harmonix-hub/testing");
-
-const baseConfig = Jest.jestConfig();
+import { Jest } from "@harmonix-hub/testing";
 
 module.exports = {
   ...Jest.jestConfig(),
