@@ -15,7 +15,6 @@
     "clean": "rm -rf dist node_modules"
   },
   "devDependencies": {
-    "@harmonix-hub/eslint": "1.0.0",
     "@harmonix-hub/tsconfig": "1.0.0",
     "@harmonix-hub/prettier": "1.0.0",
     "@babel/eslint-parser": "^7.22.15",
