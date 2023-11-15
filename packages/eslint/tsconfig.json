@@ -3,6 +3,7 @@
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",
     "outDir": "./dist",
+    "verbatimModuleSyntax": false,
   },
   "include": ["./src/index.ts"],
   "exclude": ["node_modules"]

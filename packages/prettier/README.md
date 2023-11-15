@@ -17,10 +17,12 @@ To use the Prettier configurations provided by this package, create a Prettier c
 Example of `.prettierrc.js` configuration file:
 
 ```js
+const { getPrettierConfig } = require("@harmonix-hub/prettier");
+
 module.exports = {
-  ...require('@harmonix-hub/prettier'),
-  // Add additional project-specific Prettier configurations here
+  ...getPrettierConfig(),
 };
+
 ```
 
 By extending `@harmonix-hub/prettier`, you inherit the recommended Prettier configurations for Harmonix hub projects. You can also add or override configurations in your project-specific Prettier configuration file.

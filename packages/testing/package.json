@@ -12,13 +12,12 @@
     "build": "tsc",
     "lint": "eslint . --ext ts",
     "format": "prettier . --check --cache --ignore-unknown",
-    "clean": "rm -rf dist node_modules",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "clean": "rm -rf dist node_modules"
   },
   "devDependencies": {
     "@harmonix-hub/eslint": "1.0.0",
-    "@harmonix-hub/prettier": "1.0.0",
     "@harmonix-hub/tsconfig": "1.0.0",
+    "@harmonix-hub/prettier": "1.0.0",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",

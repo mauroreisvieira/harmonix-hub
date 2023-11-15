@@ -1,10 +1,15 @@
-/** @type import("eslint").Linter.Config */
+const { getEslintConfig } = require("./dist/index");
 
+const baseConfig = getEslintConfig();
+
+/** @type import("eslint").Linter.Config */
 const config = {
-  extends: "./dist/index.js",
-  rules: {
-    "unicorn/prefer-module": 0,
+  ...baseConfig,
+  parserOptions: {
+    ...baseConfig.parserOptions,
+    project: ["./tsconfig.json"],
   },
+  ignorePatterns: [...(baseConfig.ignorePatterns || []), "example**"],
 };
 
 module.exports = config;

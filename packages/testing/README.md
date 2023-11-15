@@ -17,10 +17,13 @@ To use the Jest configurations provided by this package, create a Jest configura
 Example of `jest.config.js` configuration file:
 
 ```js
-const { jestConfig } = require('@harmonix-hub/prettier');
+import { Jest } from "@harmonix-hub/testing";
 
-module.exports = jestConfig;
+const baseConfig = Jest.jestConfig();
 
+export default {
+  ...baseConfig,
+};
 ```
 
 By extending `@harmonix-hub/testing`, you inherit the recommended Jest configurations for Harmonix hub projects. You can also add or override configurations in your project-specific Jest configuration file.
