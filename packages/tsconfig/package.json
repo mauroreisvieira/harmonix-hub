@@ -1,6 +1,6 @@
 {
   "name": "@harmonix-hub/tsconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package provides TSConfig configurations to ensuring consistency and collaboration across projects",
   "scripts": {
     "format": "prettier . --check --cache --ignore-unknown",

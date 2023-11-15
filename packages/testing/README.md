@@ -19,10 +19,8 @@ Example of `jest.config.js` configuration file:
 ```js
 import { Jest } from "@harmonix-hub/testing";
 
-const baseConfig = Jest.jestConfig();
-
-export default {
-  ...baseConfig,
+module.exports = {
+  ...Jest.jestConfig(),
 };
 ```
 

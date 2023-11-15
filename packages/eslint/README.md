@@ -17,11 +17,15 @@ To use the ESLint configurations provided by this package, create an ESLint conf
 Example `.eslintrc.js` configuration file:
 
 ```js
-module.exports = {
-  extends: ['@harmonix-hub/eslint'],
-  // Add additional project-specific ESLint configurations here
-  rules: {
-    // Additional or override rules specific to your project
+const { getEslintConfig } = require("@harmonix-hub/eslint");
+
+const baseConfig = getEslintConfig();
+
+/** @type import("eslint").Linter.Config */
+module.exports {
+  ...baseConfig,
+  parserOptions: {
+    ...baseConfig.parserOptions,
   },
 };
 ```

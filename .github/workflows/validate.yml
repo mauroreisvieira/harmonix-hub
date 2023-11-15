@@ -18,19 +18,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-          cache: pnpm
+          cache: npm
 
       - name: Install Dependencies
-        run: pnpm ci
+        run: npm ci
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
       - name: Run Tests
-        run: pnpm run test
+        run: npm run test
 
       - name: Run Lint
-        run: pnpm run lint
+        run: npm run lint
 
   lint-commits:
     name: Lint Commits
@@ -44,21 +44,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          cache: pnpm
+          cache: npm
 
       - name: Install Dependencies
-        run: pnpm ci
+        run: npm ci
 
       # Validate commits from default branch each time the workflow is executed
       - name: Validate Branch Commits
-        run: "pnpm exec -- commitlint -f origin/${{ github.event.repository.default_branch }}~0 -t HEAD -V"
+        run: "npm exec -- commitlint -f origin/${{ github.event.repository.default_branch }}~0 -t HEAD -V"
 
       # Validate the last commit from default branch when a new push is made
       - name: Validate Last Push Commit
         if: github.event_name == 'push'
-        run: pnpm exec -- commitlint --from HEAD~1 --to HEAD --verbose
+        run: npm exec -- commitlint --from HEAD~1 --to HEAD --verbose
 
       # Validate the pull request commits each time is created or updated
       - name: Validate PR Commits
         if: github.event_name == 'pull_request'
-        run: pnpm exec -- commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+        run: npm exec -- commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
