@@ -4,11 +4,10 @@
     "incremental": true,
     "target": "es6",
     "module": "CommonJS",
-    "lib": ["es2020"],
+    "lib": ["es2020", "dom"],
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "declaration": true,
     "noEmit": false
-  },
-  "include": ["next-env.d.ts"]
+  }
 }
