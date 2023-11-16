@@ -1,5 +1,5 @@
 {
-  "extends": "./base.json",
+  "extends": "@harmonix-hub/tsconfig/base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["dom", "es2016"],
