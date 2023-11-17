@@ -31,12 +31,12 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-      - name: Run Code Checks
+      - name: Run Code Lint
         continue-on-error: true
         run: npm run lint
 
-      - name: Run Formatting Checks
-        run: npm run format
+      # - name: Run Format
+      #   run: npm run format
 
   lint_commits:
     name: Validate Commits

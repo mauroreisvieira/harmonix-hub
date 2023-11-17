@@ -24,10 +24,7 @@ Example of `tsconfig.json` configuration file:
   "compilerOptions": {
     "declaration": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }
 ```
 

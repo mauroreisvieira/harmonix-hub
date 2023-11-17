@@ -1,6 +1,6 @@
 const { getPrettierConfig } = require("@harmonix-hub/prettier");
 
- /** @type {import("prettier").Config} */
+/** @type {import("prettier").Config} */
 const config = {
   ...getPrettierConfig(),
 };
