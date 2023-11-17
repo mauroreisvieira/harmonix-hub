@@ -1,31 +1,50 @@
 name: Release
-
 on:
-  push:
-    branches: ["main"]
-
   workflow_dispatch:
+    inputs:
+      positional:
+        description: "VERSIONING MODE: default - changed since the last release / from-git - tagged in the current commit / from-package - latest version is not present in the registry"
+        required: true
+        default: "default"
+        type: choice
+        options:
+          - default
+          # https://github.com/lerna/lerna/tree/main/libs/commands/version#semver-bump
+          - patch
+          - minor
+          - major
+          # https://github.com/lerna/lerna/tree/main/libs/commands/publish#usage
+          - from-git
+          - from-package
+      force_publish:
+        description: "Force publish"
+        default: false
+        required: false
+        type: boolean
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  release:
-    name: Release
+  release-packages:
+    name: Release Packages
     runs-on: ubuntu-latest
     permissions:
-      contents: write # publish a GitHub release
-      issues: write # comment on released issues
-      pull-requests: write # comment on released pull requests
-      id-token: write # enable use of OIDC for npm provenance
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: .nvmrc
           cache: npm
 
       - name: Install Dependencies
@@ -34,23 +53,30 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Run Lint
-        run: npm run lint
-
       - name: Run Tests
         run: npm run test
 
-      - name: Setup NPM Auth
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
+
+      # if publish to NPM
+      - name: Setup npm auth
         run: |
-          echo "//registry.npmjs.org :_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
           echo "access=public" >> .npmrc
 
-      - name: Publish packages to NPM
-        run: npm run publish
+      - name: Verify NPM Access
+        run: npm whoami
 
+      # required for LERNA
+      - name: Set git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm exec -- semantic-release
+      - name: Show git user
+        run: git config --list
+
+      - name: Release Packages
+        # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
+        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' || '' }}
