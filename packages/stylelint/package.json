@@ -1,6 +1,6 @@
 {
   "name": "@harmonix-hub/stylelint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This package provides Stylelint configurations to ensuring consistency and collaboration across projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
