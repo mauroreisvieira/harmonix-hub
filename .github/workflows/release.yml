@@ -1,7 +1,8 @@
 name: Release
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
   workflow_dispatch:
     inputs:
@@ -45,9 +46,10 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GIT_TOKEN }}
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install Dependencies
