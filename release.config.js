@@ -2,7 +2,7 @@
 
 const options = {
   /** branch to allow releases from */
-  branch: "master",
+  branch: "main",
   /** set to true if running on ci environment - allow publishing GitHub releases */
   isCI: false,
   /** if set to true will prevent:

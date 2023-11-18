@@ -4,7 +4,7 @@
   "npmClient": "npm",
   "registry": "https://registry.npmjs.org/",
   "ignoreChanges": ["**/*.md", "**/*.test.js"],
-  "allowBranch": ["main", "next"],
+  "allowBranch": ["main"],
   "command": {
     "publish": {
       "message": "chore(release): packages publish",
