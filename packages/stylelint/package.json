@@ -1,6 +1,6 @@
 {
   "name": "@harmonix-hub/stylelint",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This package provides Stylelint configurations to ensuring consistency and collaboration across projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,18 +16,18 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@harmonix-hub/tsconfig": "1.0.3",
-    "@harmonix-hub/prettier": "1.0.1",
-    "@harmonix-hub/testing": "1.0.1",
-    "@harmonix-hub/eslint": "1.0.1",
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@harmonix-hub/eslint": "1.0.1",
+    "@harmonix-hub/prettier": "1.0.1",
+    "@harmonix-hub/testing": "1.0.1",
+    "@harmonix-hub/tsconfig": "1.0.3",
     "@types/eslint": "^8.44.7",
     "@types/jest": "^29.5.8",
     "eslint": "^8.54.0",
     "jest": "^29.7.0",
-    "ts-jest": "^29.1.1",
     "prettier": "^3.1.0",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
