@@ -1,50 +1,26 @@
 name: Release
+
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
   workflow_dispatch:
-    inputs:
-      positional:
-        description: "VERSIONING MODE: default - changed since the last release / from-git - tagged in the current commit / from-package - latest version is not present in the registry"
-        required: true
-        default: "default"
-        type: choice
-        options:
-          - default
-          # https://github.com/lerna/lerna/tree/main/libs/commands/version#semver-bump
-          - patch
-          - minor
-          - major
-          # https://github.com/lerna/lerna/tree/main/libs/commands/publish#usage
-          - from-git
-          - from-package
-      force_publish:
-        description: "Force publish"
-        default: false
-        required: false
-        type: boolean
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
-  release-packages:
-    name: Release Packages
+  release:
+    name: Release
     runs-on: ubuntu-latest
     permissions:
-      contents: write # to be able to publish a GitHub release
-      issues: write # to be able to comment on released issues
-      pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance
+      contents: write # publish a GitHub release
+      issues: write # comment on released issues
+      pull-requests: write # comment on released pull requests
+      id-token: write # enable use of OIDC for npm provenance
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.GIT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v3
