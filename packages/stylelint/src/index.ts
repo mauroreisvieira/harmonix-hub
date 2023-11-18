@@ -46,13 +46,6 @@ export const getStyleLintConfig = (): Config => {
         },
       ],
       "function-calc-no-unspaced-operator": null,
-      "number-leading-zero": "always",
-      "string-quotes": "double",
-      "no-empty-first-line": true,
-      "max-empty-lines": 1,
-      "selector-max-empty-lines": 0,
-      "no-missing-end-of-source-newline": true,
-      "linebreaks": "unix",
       "prettier/prettier": [
         true,
         {
