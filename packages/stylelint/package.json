@@ -34,7 +34,6 @@
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "stylelint": "^15.11.0",
-    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-recommended": "^13.0.0",
     "stylelint-config-recommended-scss": "^13.1.0",

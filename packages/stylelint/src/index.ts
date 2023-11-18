@@ -6,7 +6,6 @@ export const getStyleLintConfig = (): Config => {
     extends: [
       "stylelint-config-recommended",
       "stylelint-config-standard",
-      "stylelint-config-prettier",
       "stylelint-config-recommended-scss",
       "stylelint-config-standard-scss",
       "stylelint-config-prettier-scss",
