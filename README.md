@@ -10,8 +10,9 @@ Our goal is to streamline your workflow, ensuring consistency and collaboration 
 
 -   **Prettier Configurations:** Maintain consistent code formatting effortlessly.
 -   **ESLint Rules:** Enforce clean, error-free coding practices.
+-   **Stylelint Rules:** Define and enforce consistent styles for your project.
 -   **TSConfig Settings:** Leverage robust TypeScript support tailored to your needs.
--   **Jest Configurations:** Enable reliable and efficient testing for your applications.
+-   **Testing Configurations:** Enable reliable and efficient testing for your applications.
 
 ## Contributing
 
