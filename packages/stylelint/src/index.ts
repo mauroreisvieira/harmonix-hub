@@ -21,7 +21,7 @@ export const getStyleLintConfig = (): Config => {
       "selector-no-vendor-prefix": true,
       "scss/at-rule-no-unknown": true,
       "selector-max-type": 0,
-      "max-nesting-depth:": 4,
+      "max-nesting-depth": 4,
       "selector-max-id": 0,
       // Regex to allow BEM selector
       "selector-class-pattern": "^([a-z][a-z0-9]*)((--?|__)?[a-z0-9]+)*$",
