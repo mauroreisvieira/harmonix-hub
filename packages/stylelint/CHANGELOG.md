@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/mauroreisvieira/harmonix-hub/compare/@harmonix-hub/stylelint@1.3.0...@harmonix-hub/stylelint@1.3.1) (2023-11-20)
+
+**Note:** Version bump only for package @harmonix-hub/stylelint
+
+
+
+
+
 ## 1.3.0 (2023-11-20)
 
 
