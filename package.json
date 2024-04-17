@@ -15,16 +15,16 @@
     "version:packages": "changeset version"
   },
   "devDependencies": {
-    "@types/cross-spawn": "6.0.5",
+    "@types/cross-spawn": "6.0.6",
     "cross-spawn": "7.0.3",
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "turbo": "^1.13.2"
   },
   "optionalDependencies": {
-    "@nx/nx-linux-x64-gnu": "^17.1.2"
+    "@nx/nx-linux-x64-gnu": "^18.3.0"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {

@@ -1,21 +1,26 @@
-name: 🔎 Validate
+name: 🚀 Release
 
 on:
   push:
-    branches: ["*"]
-  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 
 jobs:
-  validate:
-    name: 🔎 Validate Changes
-    runs-on: ubuntu-latest
+  release:
+    name: 🚀 Release
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [lts/*]
+        pnpm-version: [latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: ⬇️ Checkout
+        id: checkout
         uses: actions/checkout@v4
 
       - name: 🥡 Setup PNPM 8
@@ -35,9 +40,14 @@ jobs:
       - name: 🏗️ Build
         run: pnpm run build
 
-      - name: 🧪 Run Tests
-        run: pnpm run test
-
-      - name: ⚛️ Code Lint
-        continue-on-error: true
-        run: pnpm run lint
+      - name: 📣 Create Release Pull Request or Publish to NPM
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          title: "chore(release): version packages"
+          version: pnpm version:packages
+          publish: pnpm publish:packages
+          commit: "chore(release): version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

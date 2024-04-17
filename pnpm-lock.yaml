@@ -9,8 +9,8 @@ importers:
   .:
     optionalDependencies:
       '@nx/nx-linux-x64-gnu':
-        specifier: ^17.1.2
-        version: 17.1.2
+        specifier: ^18.3.0
+        version: 18.3.0
     devDependencies:
       '@changesets/cli':
         specifier: ^2.27.1
@@ -22,14 +22,14 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@types/cross-spawn':
-        specifier: 6.0.5
-        version: 6.0.5
+        specifier: 6.0.6
+        version: 6.0.6
       cross-spawn:
         specifier: 7.0.3
         version: 7.0.3
       husky:
-        specifier: ^8.0.3
-        version: 8.0.3
+        specifier: ^9.0.11
+        version: 9.0.11
       turbo:
         specifier: ^1.13.2
         version: 1.13.2
@@ -71,13 +71,13 @@ importers:
         specifier: ^7.23.3
         version: 7.24.1(@babel/core@7.24.4)
       '@harmonix-hub/prettier':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../prettier
       '@harmonix-hub/testing':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../testing
       '@harmonix-hub/tsconfig':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../tsconfig
       '@types/eslint':
         specifier: ^8.44.7
@@ -113,7 +113,7 @@ importers:
         specifier: ^18.4.2
         version: 18.6.1(@types/node@20.9.0)(typescript@5.2.2)
       '@harmonix-hub/tsconfig':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../tsconfig
       eslint:
         specifier: ^8.54.0
@@ -165,16 +165,16 @@ importers:
         specifier: ^7.23.3
         version: 7.24.1(@babel/core@7.24.4)
       '@harmonix-hub/eslint':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../eslint
       '@harmonix-hub/prettier':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../prettier
       '@harmonix-hub/testing':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../testing
       '@harmonix-hub/tsconfig':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../tsconfig
       '@types/eslint':
         specifier: ^8.44.7
@@ -220,10 +220,10 @@ importers:
         specifier: ^7.23.3
         version: 7.24.1(@babel/core@7.24.4)
       '@harmonix-hub/prettier':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../prettier
       '@harmonix-hub/tsconfig':
-        specifier: ^1.3.0
+        specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
         specifier: ^29.5.8
@@ -2368,8 +2368,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@nx/nx-linux-x64-gnu@17.1.2:
-    resolution: {integrity: sha512-3cC131hJ3VhuxjzzBlwIdVp46onykOo78EmnURNdLxcWOpmcKgYXn7OnVwjrglYi+JL7D0vABGKKUpt1cs6/rA==}
+  /@nx/nx-linux-x64-gnu@18.3.0:
+    resolution: {integrity: sha512-Pm7Q1hjKBJ3DFfnCLAtJVm13SkIushO3rPUdsDg5xZzOp59igNxrX2wJlwfi7U8dZMEZUPG0N1BIR3o7eEBxpQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2438,8 +2438,8 @@ packages:
       '@types/node': 20.9.0
     dev: true
 
-  /@types/cross-spawn@6.0.5:
-    resolution: {integrity: sha512-wsIMP68FvGXk+RaWhraz6Xp4v7sl4qwzHAmtPaJEN2NRTXXI9LtFawUpeTsBNL/pd6QoLStdytCaAyiK7AEd/Q==}
+  /@types/cross-spawn@6.0.6:
+    resolution: {integrity: sha512-fXRhhUkG4H3TQk5dBhQ7m/JDdSNHKwR2BBia62lhwEIq9xGiQKLxd6LymNhn47SjXhsUEPmxi+PKw2OkW4LLjA==}
     dependencies:
       '@types/node': 20.9.0
     dev: true
@@ -4387,9 +4387,9 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: true
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
+  /husky@9.0.11:
+    resolution: {integrity: sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==}
+    engines: {node: '>=18'}
     hasBin: true
     dev: true
 
