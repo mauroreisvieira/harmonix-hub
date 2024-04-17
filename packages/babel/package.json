@@ -19,7 +19,6 @@
     "@babel/preset-typescript": "^7.22.5"
   },
   "devDependencies": {
-    "@harmonix-hub/prettier": "workspace:*",
     "@harmonix-hub/tsconfig": "workspace:*",
     "typescript": "^5.2.2"
   },

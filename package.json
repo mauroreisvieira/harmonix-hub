@@ -6,7 +6,7 @@
     "prepare": "husky install",
     "build": "turbo run build",
     "lint": "turbo run lint --parallel",
-    "format": "turbo run format",
+    "format": "prettier . --check --cache --ignore-unknown",
     "test": "turbo run test --parallel",
     "clean": "turbo clean && rm -rf node_modules",
     "publish:packages": "changeset publish",
@@ -21,6 +21,7 @@
     "@harmonix-hub/eslint": "workspace:*",
     "@harmonix-hub/prettier": "workspace:*",
     "@harmonix-hub/tsconfig": "workspace:*",
+    "@harmonix-hub/babel": "workspace:*",
     "husky": "^9.0.11",
     "turbo": "^1.13.2"
   },

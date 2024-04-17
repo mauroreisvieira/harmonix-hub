@@ -10,7 +10,6 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint . --ext ts",
-    "format": "prettier . --check --cache --ignore-unknown",
     "clean": "rm -rf dist node_modules",
     "test": "jest"
   },
@@ -27,10 +26,10 @@
     "eslint-plugin-workspaces": "^0.9.0"
   },
   "devDependencies": {
-    "@harmonix-hub/prettier": "workspace:*",
     "@harmonix-hub/testing": "workspace:*",
     "@harmonix-hub/babel": "workspace:*",
-    "@harmonix-hub/tsconfig": "workspace:*"
+    "@harmonix-hub/tsconfig": "workspace:*",
+    "jest": "^29.7.0"
   },
   "publishConfig": {
     "access": "public"

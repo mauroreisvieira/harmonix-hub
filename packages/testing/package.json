@@ -21,7 +21,6 @@
     "jest-environment-jsdom": "^29.7.0"
   },
   "devDependencies": {
-    "@harmonix-hub/prettier": "workspace:*",
     "@harmonix-hub/babel": "workspace:*",
     "@harmonix-hub/tsconfig": "workspace:*",
     "eslint": "^8.54.0"
