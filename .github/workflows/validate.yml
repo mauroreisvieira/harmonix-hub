@@ -1,4 +1,4 @@
-name: Validate
+name: 🔎 Validate
 
 on:
   push:
@@ -12,58 +12,32 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate Changes
+    name: 🔎 Validate Changes
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: ⬇️ Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: 🥡 Setup PNPM 8
+        uses: pnpm/action-setup@v3
         with:
-          cache: npm
+          version: 8
 
-      - name: Install Dependencies
-        run: npm i --no-save # as NPM CI cleans node_modules (faster)
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
-      - name: Build
-        run: npm run build
+      - name: 🧩 Install Dependencies
+        id: install-dependencies
+        run: pnpm install
 
-      - name: Run Tests
-        run: npm run test
+      - name: 🏗️ Build
+        run: pnpm run build
 
-      - name: Run Code Lint
+      - name: ⚛️ Code Lint
         continue-on-error: true
-        run: npm run lint
+        run: pnpm run lint
 
-      # - name: Run Format
-      #   run: npm run format
-
-  lint_commits:
-    name: Validate Commits
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-
-      - name: Install Dependencies
-        run: npm i --no-save # as NPM CI cleans node_modules (faster)
-
-      # https://github.com/wagoid/commitlint-github-action
-      - name: Validate commits differing from the default branch
-        # Lint only commit range that differs from origin default branch, assuming current branch is ahead
-        # run: "$(npm bin)/commitlint -f origin/<base branch>~<number of commits before to include> -t <branch to compare> -V"
-        run: "npm exec -- commitlint -f origin/${{ github.event.repository.default_branch }}~0 -t HEAD -V"
-
-      - name: Validate current commit (last commit) with commitlint
-        if: github.event_name == 'push'
-        run: npm exec -- commitlint --from HEAD~1 --to HEAD --verbose
-
-      - name: Validate PR commits with commitlint
-        if: github.event_name == 'pull_request'
-        run: npm exec -- commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+      - name: 🧪 Run Tests
+        run: pnpm run test
