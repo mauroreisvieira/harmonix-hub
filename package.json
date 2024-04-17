@@ -4,13 +4,11 @@
   "description": "Your one-stop repository for unified, hassle-free configurations of Prettier, ESLint, TSConfig, and Jest. Simplify development, ensure consistency, and streamline collaboration effortlessly.",
   "scripts": {
     "prepare": "husky install",
-    "start": "turbo run start --parallel --stream",
-    "build": "npm run clean && turbo run build",
-    "postbuild": "turbo run postbuild",
-    "test": "turbo run test --parallel",
+    "build": "turbo run build",
     "lint": "turbo run lint --parallel",
     "format": "turbo run format",
-    "clean": "turbo run clean",
+    "test": "turbo run test --parallel",
+    "clean": "turbo clean && rm -rf node_modules",
     "publish:packages": "changeset publish",
     "version:packages": "changeset version"
   },
@@ -20,6 +18,8 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
+    "@harmonix-hub/tsconfig": "workspace:*",
+    "@harmonix-hub/prettier": "workspace:*",
     "husky": "^9.0.11",
     "turbo": "^1.13.2"
   },

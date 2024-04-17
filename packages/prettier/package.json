@@ -8,8 +8,7 @@
     "dist/*"
   ],
   "scripts": {
-    "start": "tsc -w",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "lint": "eslint . --ext ts",
     "format": "prettier . --check --cache --ignore-unknown",
     "clean": "rm -rf dist node_modules"

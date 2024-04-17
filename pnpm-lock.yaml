@@ -21,6 +21,12 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.2.2
         version: 19.2.2
+      '@harmonix-hub/prettier':
+        specifier: workspace:*
+        version: link:packages/prettier
+      '@harmonix-hub/tsconfig':
+        specifier: workspace:*
+        version: link:packages/tsconfig
       '@types/cross-spawn':
         specifier: 6.0.6
         version: 6.0.6
