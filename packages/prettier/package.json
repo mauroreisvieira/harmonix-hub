@@ -13,17 +13,17 @@
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
-    "prettier": "^3.1.0"
+    "prettier": "^3.2.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.2",
     "@harmonix-hub/tsconfig": "workspace:*",
     "@harmonix-hub/babel": "workspace:*",
-    "eslint": "^8.54.0",
-    "@babel/eslint-parser": "^7.23.3",
-    "@babel/preset-env": "^7.22.7",
-    "@babel/preset-react": "^7.22.15",
-    "@babel/preset-typescript": "^7.22.5"
+    "@babel/eslint-parser": "^7.24.1",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.4.5"
   },
   "publishConfig": {
     "access": "public"
