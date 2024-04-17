@@ -14,21 +14,6 @@
     "clean": "rm -rf dist node_modules",
     "test": "jest"
   },
-  "devDependencies": {
-    "@babel/preset-env": "^7.23.3",
-    "@babel/preset-typescript": "^7.23.3",
-    "@harmonix-hub/eslint": "workspace:*",
-    "@harmonix-hub/prettier": "workspace:*",
-    "@harmonix-hub/testing": "workspace:*",
-    "@harmonix-hub/tsconfig": "workspace:*",
-    "@types/eslint": "^8.44.7",
-    "@types/jest": "^29.5.8",
-    "eslint": "^8.54.0",
-    "jest": "^29.7.0",
-    "prettier": "^3.1.0",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.2.2"
-  },
   "dependencies": {
     "stylelint": "^15.11.0",
     "stylelint-config-prettier-scss": "^1.0.0",
@@ -40,6 +25,14 @@
     "stylelint-no-unsupported-browser-features": "^7.0.0",
     "stylelint-prettier": "^4.0.2",
     "stylelint-scss": "^5.3.1"
+  },
+  "devDependencies": {
+    "@harmonix-hub/eslint": "workspace:*",
+    "@harmonix-hub/prettier": "workspace:*",
+    "@harmonix-hub/testing": "workspace:*",
+    "@harmonix-hub/tsconfig": "workspace:*",
+    "@harmonix-hub/babel": "workspace:*",
+    "typescript": "^5.2.2"
   },
   "publishConfig": {
     "access": "public"

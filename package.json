@@ -18,8 +18,9 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
-    "@harmonix-hub/tsconfig": "workspace:*",
+    "@harmonix-hub/eslint": "workspace:*",
     "@harmonix-hub/prettier": "workspace:*",
+    "@harmonix-hub/tsconfig": "workspace:*",
     "husky": "^9.0.11",
     "turbo": "^1.13.2"
   },
