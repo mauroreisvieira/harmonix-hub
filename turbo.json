@@ -8,9 +8,6 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "format": {
-      "dependsOn": ["^format"]
-    },
     "test": {
       "cache": false
     },

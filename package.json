@@ -6,7 +6,7 @@
     "prepare": "husky install",
     "build": "turbo run build",
     "lint": "turbo run lint --parallel",
-    "format": "prettier . --check --cache --ignore-unknown",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "test": "turbo run test --parallel",
     "clean": "turbo clean && rm -rf node_modules",
     "publish:packages": "changeset publish",

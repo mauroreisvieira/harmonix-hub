@@ -8,5 +8,5 @@ export const jestConfig = (): JestConfigWithTsJest => {
       "^.+\\.ts?$": "ts-jest",
     },
     transformIgnorePatterns: ["<rootDir>/node_modules/"],
-  }
+  };
 };
