@@ -1,63 +1,53 @@
-name: Release
+name: 🚀 Release
 
 on:
   push:
-    branches: ["main"]
-
+    branches:
+      - main
   workflow_dispatch:
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 
 jobs:
   release:
-    name: Release
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # publish a GitHub release
-      issues: write # comment on released issues
-      pull-requests: write # comment on released pull requests
-      id-token: write # enable use of OIDC for npm provenance
+    name: 🚀 Release
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [lts/*]
+        pnpm-version: [latest]
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: ⬇️ Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: 🥡 Setup PNPM 8
+        uses: pnpm/action-setup@v3
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          version: 8
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version-file: .nvmrc
-          cache: npm
+          cache: pnpm
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: 🧩 Install Dependencies
+        id: install-dependencies
+        run: pnpm install
 
-      - name: Build
-        run: npm run build
+      - name: 🏗️ Build
+        run: pnpm run build
 
-      - name: Run Tests
-        run: npm run test
-
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: npm audit signatures
-
-      # if publish to NPM
-      - name: Setup npm auth
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
-          echo "access=public" >> .npmrc
-
-      - name: Verify NPM Access
-        run: npm whoami
-
-      # required for LERNA
-      - name: Set git user
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      - name: Show git user
-        run: git config --list
-
-      - name: Release Packages
-        # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
-        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' || '' }}
+      - name: 📣 Create Release Pull Request or Publish to NPM
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          title: "chore(release): version packages"
+          version: pnpm version:packages
+          publish: pnpm publish:packages
+          commit: "chore(release): version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

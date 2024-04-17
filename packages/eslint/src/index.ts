@@ -30,5 +30,5 @@ export const getEslintConfig = (): Linter.Config => {
       "react-hooks/exhaustive-deps": "error",
     },
     ignorePatterns: ["dist"],
-  }
+  };
 };

@@ -4,35 +4,32 @@
   "description": "Your one-stop repository for unified, hassle-free configurations of Prettier, ESLint, TSConfig, and Jest. Simplify development, ensure consistency, and streamline collaboration effortlessly.",
   "scripts": {
     "prepare": "husky install",
-    "start": "lerna run start --parallel --stream",
-    "build": "npm run clean && lerna run build",
-    "postbuild": "lerna run postbuild",
-    "test": "lerna run test --parallel",
-    "lint": "lerna run lint --parallel",
-    "format": "lerna run format",
-    "clean": "lerna run clean",
-    "publish": "lerna publish from-package --yes"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "release": {
-    "branches": [
-      "main"
-    ]
+    "build": "turbo run build",
+    "lint": "turbo run lint --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test --parallel",
+    "clean": "turbo clean && rm -rf node_modules",
+    "publish:packages": "changeset publish",
+    "version:packages": "changeset version"
   },
   "devDependencies": {
-    "@types/cross-spawn": "6.0.5",
+    "@types/cross-spawn": "6.0.6",
     "cross-spawn": "7.0.3",
-    "@commitlint/cli": "^18.4.2",
-    "@commitlint/config-conventional": "^18.4.2",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "husky": "^8.0.3",
-    "lerna": "7.4.2",
-    "semantic-release": "^22.0.8"
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@harmonix-hub/eslint": "workspace:*",
+    "@harmonix-hub/prettier": "workspace:*",
+    "@harmonix-hub/tsconfig": "workspace:*",
+    "@harmonix-hub/babel": "workspace:*",
+    "husky": "^9.0.11",
+    "turbo": "^1.13.2"
   },
   "optionalDependencies": {
-    "@nx/nx-linux-x64-gnu": "^17.1.2"
+    "@nx/nx-linux-x64-gnu": "^18.3.1"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
   }
 }

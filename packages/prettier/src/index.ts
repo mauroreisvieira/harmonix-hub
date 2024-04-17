@@ -5,5 +5,5 @@ export const getPrettierConfig = (): Options => {
     quoteProps: "consistent",
     bracketSameLine: true,
     printWidth: 100,
-  }
+  };
 };

@@ -9,8 +9,8 @@
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
 
 # HEAD - prevent rebases from failing
-# master|develop - prevent main / protected branches (ci) from failing
-valid_branch_regex='^(((fix|feat|refactor|infrastructure|test|tests|docs|ci)\/[a-zA-Z0-9\-]+)|master|develop|HEAD)$'
+# main|develop - prevent main / protected branches (ci) from failing
+valid_branch_regex='^(((fix|feat|refactor|infrastructure|test|tests|docs|ci)\/[a-zA-Z0-9\-]+)|main|develop|HEAD)$'
 
 message="\n\nWrong branch name ("$local_branch_name").\nBranch names should match: $valid_branch_regex. Your commit will be rejected.\n\n"
 

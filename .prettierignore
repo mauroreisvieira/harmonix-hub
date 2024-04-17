@@ -1,0 +1,6 @@
+# Markdown files
+**/*.md
+
+# Generated files
+dist
+cache
