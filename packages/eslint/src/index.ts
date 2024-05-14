@@ -24,10 +24,10 @@ export const getEslintConfig = (): Linter.Config => {
       "react/display-name": "off",
       "react/jsx-first-prop-new-line": ["error", "multiline"],
       "react/jsx-indent-props": ["error", 2],
-      "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
       "react/self-closing-comp": "error",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "error",
+      "no-console": "error",
     },
     ignorePatterns: ["dist"],
   };
