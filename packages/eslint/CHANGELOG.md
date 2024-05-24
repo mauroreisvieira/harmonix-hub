@@ -1,19 +1,20 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## 1.3.5
 
 ### Patch Changes
 
-- 0e8ca88: fix: remoce possible empty string from rules
+- fix: remove possible empty string from rules
 
 ## 1.3.3
 
 ### Patch Changes
 
-- 18b847d: fix: update eslint configuration to support react
+- fix: update eslint configuration to support react
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 1.3.0 (2023-11-20)
 
