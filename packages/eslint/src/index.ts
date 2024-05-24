@@ -1,6 +1,17 @@
 import type { Linter } from "eslint";
 
-export const getEslintConfig = (): Linter.Config => {
+interface Options {
+  /** Whether to enable React-specific ESLint rules. */
+  useReact?: boolean;
+}
+
+/**
+ * Generate ESLint configuration based on provided options.
+ *
+ * @param options Configuration options.
+ * @returns ESLint configuration object.
+ */
+export const getEslintConfig = ({ useReact = true }: Options): Linter.Config => {
   return {
     env: {
       es2021: true,
@@ -9,25 +20,34 @@ export const getEslintConfig = (): Linter.Config => {
     },
     extends: [
       "eslint:recommended",
-      "plugin:react/recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:@typescript-eslint/eslint-recommended",
+      ...(useReact ? ["plugin:react/recommended"] : []),
     ],
     parserOptions: {
       sourceType: "module",
       ecmaVersion: 2020,
     },
-    plugins: ["@typescript-eslint/eslint-plugin", "@typescript-eslint", "react-hooks", "prettier"],
+    plugins: [
+      "@typescript-eslint/eslint-plugin",
+      "@typescript-eslint",
+      "prettier",
+      useReact ? "react-hooks" : "",
+    ],
     rules: {
-      "react/jsx-key": "off",
-      "react/prop-types": "off",
-      "react/display-name": "off",
-      "react/jsx-first-prop-new-line": ["error", "multiline"],
-      "react/jsx-indent-props": ["error", 2],
-      "react/self-closing-comp": "error",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "error",
       "no-console": "error",
+      ...(useReact
+        ? {
+            "react/jsx-key": "off",
+            "react/prop-types": "off",
+            "react/display-name": "off",
+            "react/jsx-first-prop-new-line": ["error", "multiline"],
+            "react/jsx-indent-props": ["error", 2],
+            "react/self-closing-comp": "error",
+            "react-hooks/rules-of-hooks": "error",
+            "react-hooks/exhaustive-deps": "error",
+          }
+        : {}),
     },
     ignorePatterns: ["dist"],
   };
