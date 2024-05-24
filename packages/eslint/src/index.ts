@@ -11,7 +11,7 @@ interface Options {
  * @param options Configuration options.
  * @returns ESLint configuration object.
  */
-export const getEslintConfig = ({ useReact = true }: Options): Linter.Config => {
+export const getEslintConfig = (options?: Options): Linter.Config => {
   return {
     env: {
       es2021: true,
@@ -22,7 +22,7 @@ export const getEslintConfig = ({ useReact = true }: Options): Linter.Config => 
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:@typescript-eslint/eslint-recommended",
-      ...(useReact ? ["plugin:react/recommended"] : []),
+      ...(options?.useReact ? ["plugin:react/recommended"] : []),
     ],
     parserOptions: {
       sourceType: "module",
@@ -32,11 +32,11 @@ export const getEslintConfig = ({ useReact = true }: Options): Linter.Config => 
       "@typescript-eslint/eslint-plugin",
       "@typescript-eslint",
       "prettier",
-      useReact ? "react-hooks" : "",
+      options?.useReact ? "react-hooks" : "",
     ],
     rules: {
       "no-console": "error",
-      ...(useReact
+      ...(options?.useReact
         ? {
             "react/jsx-key": "off",
             "react/prop-types": "off",
