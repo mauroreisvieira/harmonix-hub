@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.5
+
+### Patch Changes
+
+- 0e8ca88: fix: remoce possible empty string from rules
+
 ## 1.3.3
 
 ### Patch Changes
