@@ -32,7 +32,7 @@ export const getEslintConfig = (options?: Options): Linter.Config => {
       "@typescript-eslint/eslint-plugin",
       "@typescript-eslint",
       "prettier",
-      options?.useReact ? "react-hooks" : "",
+      ...(options?.useReact ? ["react-hooks"] : []),
     ],
     rules: {
       "no-console": "error",
