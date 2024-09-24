@@ -1,4 +1,4 @@
-import { getStyleLintConfig } from './index'
+import { getStyleLintConfig } from '../src/index'
 
 describe('getStyleLintConfig', () => {
 	it('returns a valid Stylelint configuration object', () => {

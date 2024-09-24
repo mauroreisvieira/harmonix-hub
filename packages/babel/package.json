@@ -12,14 +12,14 @@
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-env": "^7.24.4",
-    "@babel/preset-react": "^7.24.1",
-    "@babel/preset-typescript": "^7.24.1"
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7"
   },
   "devDependencies": {
-    "@harmonix-hub/tsconfig": "workspace:*",
-    "typescript": "^5.4.5"
+    "typescript": "^5.2.2",
+    "@harmonix-hub/tsconfig": "workspace:*"
   },
   "publishConfig": {
     "access": "public"
