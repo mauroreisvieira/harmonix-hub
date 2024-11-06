@@ -1,8 +1,9 @@
 {
-  "extends": "@harmonix-hub/tsconfig/base.json",
+  "extends": "./base.json",
   "compilerOptions": {
     "jsx": "react",
-    "lib": ["dom", "es2016"],
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "moduleResolution": "node",
     "module": "ESNext",
     "target": "es6"
   }

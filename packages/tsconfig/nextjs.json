@@ -1,5 +1,5 @@
 {
-  "extends": "@harmonix-hub/tsconfig/base.json",
+  "extends": "./base.json",
   "compilerOptions": {
     "rootDir": "src",
     "target": "es5",

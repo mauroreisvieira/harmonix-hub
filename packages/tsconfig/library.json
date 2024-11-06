@@ -1,9 +1,8 @@
 {
-  "extends": "@harmonix-hub/tsconfig/base.json",
+  "extends": "./base.json",
   "compilerOptions": {
-    "incremental": true,
     "target": "es6",
-    "module": "CommonJS",
+    "module": "ESNext",
     "lib": ["es2020", "dom"],
     "resolveJsonModule": true,
     "moduleResolution": "node",
