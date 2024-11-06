@@ -32,12 +32,12 @@ jobs:
         id: install-dependencies
         run: pnpm install
 
-      - name: 🏗️ Build
-        run: pnpm run build
-
       - name: ⚛️ Code Lint
         continue-on-error: true
         run: pnpm run lint
 
-      - name: 🧪 Run Tests
+      - name: 🧪 Run Unit Tests
         run: pnpm run test
+
+      - name: 🏗️ Build
+        run: pnpm run build
