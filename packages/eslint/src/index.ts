@@ -20,9 +20,16 @@ export const getEslintConfig = (options?: Options): Linter.Config => {
 		},
 		extends: [
 			'eslint:recommended',
+			'plugin:eslint-comments/recommended',
 			'plugin:@typescript-eslint/recommended',
 			'plugin:@typescript-eslint/eslint-recommended',
-			...(options?.useReact ? ['plugin:react/recommended'] : []),
+			...(options?.useReact
+				? [
+						'plugin:react/recommended',
+						'plugin:react-hooks/recommended',
+						'plugin:jsx-a11y/recommended',
+					]
+				: []),
 		],
 		parserOptions: {
 			sourceType: 'module',

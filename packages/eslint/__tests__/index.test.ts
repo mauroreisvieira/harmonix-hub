@@ -1,4 +1,4 @@
-import { getEslintConfig } from './index'
+import { getEslintConfig } from '../src/index'
 
 describe('getEslintConfig', () => {
 	it('returns a valid ESLint configuration object', () => {

@@ -1,8 +1,0 @@
-{
-  "extends": "@harmonix-hub/tsconfig/library.json",
-  "compilerOptions": {
-    "outDir": "./dist"
-  },
-  "include": ["./src/index.ts"],
-  "exclude": ["node_modules"]
-}

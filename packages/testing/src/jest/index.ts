@@ -5,7 +5,8 @@ export const jestConfig = (): JestConfigWithTsJest => {
 		preset: 'ts-jest',
 		testEnvironment: 'node',
 		transform: {
-			'^.+\\.ts?$': 'ts-jest',
+			'^.+\\.jsx?$': 'babel-jest',
+			'^.+\\.tsx?$': 'ts-jest',
 		},
 		transformIgnorePatterns: ['<rootDir>/node_modules/'],
 	}
