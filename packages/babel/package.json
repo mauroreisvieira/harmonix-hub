@@ -1,25 +1,22 @@
 {
   "name": "@harmonix-hub/babel",
-  "version": "0.1.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.2.0",
+  "main": "index.js",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
     "lint": "eslint . --ext ts",
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-env": "^7.24.4",
-    "@babel/preset-react": "^7.24.1",
-    "@babel/preset-typescript": "^7.24.1"
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7"
   },
   "devDependencies": {
-    "@harmonix-hub/tsconfig": "workspace:*",
-    "typescript": "^5.4.5"
+    "@harmonix-hub/tsconfig": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

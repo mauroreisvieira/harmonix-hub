@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "ES2020",
@@ -8,8 +12,23 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
+    "sourceMap": true,
+    "declaration": true,
+    "composite": true,
+    "declarationMap": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
-    "sourceMap": true
+    "noImplicitOverride": true
   }
 }
