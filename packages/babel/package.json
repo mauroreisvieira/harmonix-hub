@@ -1,13 +1,11 @@
 {
   "name": "@harmonix-hub/babel",
-  "version": "0.1.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.2.0",
+  "main": "index.js",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
     "lint": "eslint . --ext ts",
     "clean": "rm -rf dist node_modules"
   },
@@ -18,7 +16,6 @@
     "@babel/preset-typescript": "^7.24.7"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
     "@harmonix-hub/tsconfig": "workspace:*"
   },
   "publishConfig": {
