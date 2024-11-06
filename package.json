@@ -9,8 +9,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "test": "turbo run test --parallel",
     "clean": "turbo clean && rm -rf node_modules",
-    "publish:packages": "changeset publish",
-    "version:packages": "changeset version"
+    "changelog": "changeset-conventional",
+    "changelog:prepare": "changeset",
+    "changelog:generate": "changeset-conventional && changeset version",
+    "packages:status": "changeset status --verbose",
+    "packages:publish": "changeset publish",
+    "packages:version": "changeset version"
   },
   "devDependencies": {
     "@harmonix-hub/eslint": "workspace:*",
@@ -21,6 +25,7 @@
     "@changesets/cli": "^2.27.8",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "changeset-conventional-commits": "^0.2.5",
     "@types/jest": "^29.5.13",
     "jest": "^29.7.0",
     "cross-spawn": "7.0.3",
