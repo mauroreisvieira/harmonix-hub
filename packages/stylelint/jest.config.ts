@@ -1,5 +1,5 @@
-import { jestConfig } from '@harmonix-hub/testing'
+import { jestConfig } from "@harmonix-hub/testing";
 
 module.exports = {
-	...jestConfig(),
-}
+  ...jestConfig(),
+};
