@@ -1,8 +1,9 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
+    "incremental": true,
     "target": "es6",
-    "module": "ESNext",
+    "module": "CommonJS",
     "lib": ["es2020", "dom"],
     "resolveJsonModule": true,
     "moduleResolution": "node",
