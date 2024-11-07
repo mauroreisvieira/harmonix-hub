@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-interface Options {
+interface EslintConfigOptions {
 	/** Whether to enable React-specific ESLint rules. */
 	useReact?: boolean
 }
@@ -11,7 +11,7 @@ interface Options {
  * @param options Configuration options.
  * @returns ESLint configuration object.
  */
-export const getEslintConfig = (options?: Options): Linter.Config => {
+export const getEslintConfig = (options?: EslintConfigOptions): Linter.Config => {
 	return {
 		env: {
 			es2021: true,
