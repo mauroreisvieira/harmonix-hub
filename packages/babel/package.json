@@ -1,6 +1,6 @@
 {
   "name": "@harmonix-hub/babel",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "files": [
     "/dist"

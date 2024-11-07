@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.7
+
+### Patch Changes
+
+- update tsconfig library module to `UMD`
+
 ## 1.3.6
 
 ### Patch Changes

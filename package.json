@@ -9,9 +9,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "test": "turbo run test --parallel",
     "clean": "turbo clean && rm -rf node_modules",
-    "changelog": "changeset-conventional",
-    "changelog:prepare": "changeset",
-    "changelog:generate": "changeset-conventional && changeset version",
+    "changelog:conventional": "changeset-conventional",
+    "changelog:package": "changeset",
+    "changelog:generate": "npm run changelog:conventional & npm run packages:version",
     "packages:status": "changeset status --verbose",
     "packages:publish": "changeset publish",
     "packages:version": "changeset version"
