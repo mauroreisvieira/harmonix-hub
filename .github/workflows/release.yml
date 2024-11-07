@@ -41,7 +41,7 @@ jobs:
         run: pnpm run build
 
       - name: 📋 Changelog
-        run: pnpm run changelog
+        run: pnpm run changelog:conventional
 
       - name: 📣 Create Release Pull Request or Publish to NPM
         id: changesets
