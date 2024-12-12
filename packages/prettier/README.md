@@ -17,11 +17,11 @@ To use the Prettier configurations provided by this package, create a Prettier c
 Example of `.prettierrc.js` configuration file:
 
 ```js
-const { getPrettierConfig } = require("@harmonix-hub/prettier");
+const { prettierConfig } = require("@harmonix-hub/prettier");
 
  /** @type {import("prettier").Config} */
 module.exports = {
-  ...getPrettierConfig(),
+  ...prettierConfig,
 };
 ```
 

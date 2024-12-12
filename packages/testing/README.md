@@ -17,10 +17,10 @@ To use the Jest configurations provided by this package, create a Jest configura
 Example of `jest.config.js` configuration file:
 
 ```js
-import { Jest } from "@harmonix-hub/testing";
+import { jestConfig } from "@harmonix-hub/testing";
 
 module.exports = {
-  ...Jest.jestConfig(),
+  ...jestConfig,
 };
 ```
 

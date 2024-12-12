@@ -17,21 +17,19 @@ To use the Stylelint configurations provided by this package, create an Stylelin
 Example `stylelint.config.js` configuration file:
 
 ```js
-const { getStyleLintConfig } = require("@harmonix-hub/stylelint");
-
-const baseConfig = getStyleLintConfig();
+const { stylelintConfig } = require("@harmonix-hub/stylelint");
 
 /** @type {import("stylelint").Config} */
 module.exports = {
   /**
    * Use main configuration from shared infrastructure
    */
-  ...baseConfig,
+  ...stylelintConfig,
   /**
    * Add additional configurations below
    * When adding a new config entry,
    */
-  ignoreFiles: [...(baseConfig.ignoreFiles || []), "example**"],
+  ignoreFiles: [...(stylelintConfig.ignoreFiles || []), "example**"],
 };
 ```
 

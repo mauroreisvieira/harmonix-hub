@@ -7,27 +7,34 @@ This package provides ESLint configurations for projects developed with Harmonix
 You can install this ESLint configuration package using npm.
 
 ```bash
-npm install @harmonix-hub/eslint --save-dev
+npm install @typescript-eslint eslint-config-prettier @harmonix-hub/eslint --save-dev
 ```
 
 ## Usage
 
-To use the ESLint configurations provided by this package, create an ESLint configuration file in your project directory (e.g., `.eslintrc.js`, `.eslintrc.json`), and extend the configuration from `@harmonix-hub/eslint`.
+To use the ESLint configurations provided by this package, create an ESLint configuration file in your project directory (e.g., `eslint.config.mjs`), apply the configuration from `@harmonix-hub/eslint`.
 
-Example `.eslintrc.js` configuration file:
+Example `eslint.config.mjs` configuration file:
 
 ```js
-const { getEslintConfig } = require("@harmonix-hub/eslint");
-
-const baseConfig = getEslintConfig();
+import tsConfig from "typescript-eslint";
+import prettierConfig from "eslint-config-prettier";
+import harmonixConfig from "@harmonix-hub/eslint";
 
 /** @type import("eslint").Linter.Config */
-module.exports = {
-  ...baseConfig,
-  parserOptions: {
-    ...baseConfig.parserOptions,
+export default [
+  {
+    ignores: ["dist", "node_modules", "**/*.js"]
   },
-};
+  {
+    files: ["**/*.ts", "**/*.tsx"]
+  },
+  ...tsConfig.configs.recommended,
+  harmonixConfig.tsConfigs,
+  harmonixConfig.reactConfigs,
+  harmonixConfig.jestConfigs,
+  prettierConfig,
+];
 ```
 
 By extending `@harmonix-hub/eslint`, you inherit the recommended ESLint rules for Harmonix hub projects.

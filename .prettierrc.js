@@ -1,8 +1,10 @@
-const { getPrettierConfig } = require("@harmonix-hub/prettier");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { prettierConfig } = require("@harmonix-hub/prettier");
 
 /** @type {import("prettier").Config} */
 const config = {
-  ...getPrettierConfig(),
+  ...prettierConfig,
+  tabWidth: 2
 };
 
 module.exports = config;

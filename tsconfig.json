@@ -1,0 +1,3 @@
+{
+  "extends": "@harmonix-hub/tsconfig/react.json"
+}

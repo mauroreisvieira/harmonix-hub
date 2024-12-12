@@ -9,19 +9,19 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "lint": "eslint . --ext ts",
+    "lint": "eslint .",
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
     "@types/babel__core": "^7.20.5",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0"
   },
   "devDependencies": {
     "@harmonix-hub/tsconfig": "workspace:*",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "publishConfig": {
     "access": "public"
