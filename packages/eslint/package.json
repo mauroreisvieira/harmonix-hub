@@ -10,20 +10,17 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint .",
-    "clean": "rm -rf dist node_modules",
-    "test": "jest"
+    "clean": "rm -rf dist node_modules"
   },
   "peerDependencies": {
     "eslint": "^9.16.0"
   },
   "dependencies": {
-    "typescript-eslint": "^8.17.0",
-    "@babel/eslint-parser": "^7.25.9",
+    "typescript-eslint": "^8.18.0",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-tsdoc": "^0.4.0",
-    "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.1.0",

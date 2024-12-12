@@ -1,3 +1,6 @@
 {
-  "extends": "@harmonix-hub/tsconfig/react.json"
+  "extends": "@harmonix-hub/tsconfig/react.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  }
 }

@@ -1,7 +1,7 @@
 /**
  * Prints name.
  *
- * @param {string} name - The name
+ * @param name - The name
  */
 function printName(name: string): string {
   return name;
@@ -10,9 +10,9 @@ function printName(name: string): string {
 /**
  * Joins the first name and last name with a space.
  *
- * @param {string} firstName - The first name
- * @param {string} lastName - The last name
- * @return {string} The concatenated full name
+ * @param firstName - The first name
+ * @param lastName - The last name
+ * @returns The concatenated full name
  */
 function join(firstName?: string, lastName?: string): string {
   if (firstName && lastName) {

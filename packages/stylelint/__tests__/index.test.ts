@@ -1,9 +1,7 @@
-import { getStyleLintConfig } from "../src/index";
+import { stylelintConfig } from "../src/index";
 
-describe("getStyleLintConfig", () => {
-  it("returns a valid Stylelint configuration object", () => {
-    const stylelintConfig = getStyleLintConfig();
-
+describe("stylelintConfig", () => {
+  it("returns a valid style lint configuration object", () => {
     // Basic structure checks
     expect(stylelintConfig).toHaveProperty("customSyntax");
     expect(stylelintConfig).toHaveProperty("extends");

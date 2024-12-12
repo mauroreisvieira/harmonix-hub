@@ -1,6 +1,5 @@
-import tsConfig from "typescript-eslint";
 import prettierConfig from "eslint-config-prettier";
-import harmonixConfig from "@harmonix-hub/eslint";
+import hxh from "@harmonix-hub/eslint";
 
 /** @type import("eslint").Linter.Config */
 export default [
@@ -8,11 +7,9 @@ export default [
     files: ["*.ts", "*.tsx"]
   },
   {
-    ignores: ["dist", "node_modules", "**/*.js"]
+    ignores: ["dist", "node_modules", "/**/*.d.ts", "**/*.js"]
   },
-  ...tsConfig.configs.recommended,
-  harmonixConfig.tsConfigs,
-  harmonixConfig.reactConfigs,
-  harmonixConfig.jestConfigs,
+  ...hxh.tsConfigs,
+  hxh.reactConfigs,
   prettierConfig,
 ];

@@ -25,7 +25,7 @@ export const jestConfigs: Linter.Config = {
   languageOptions,
   rules: {
     "jest/no-mocks-import": "off",
-    // Added this so test file don't give error when accessing DOM element using DOM api
+    // Added this so test file don't give error when accessing DOM element using DOM API
     "testing-library/no-node-access": "off"
   }
 };
