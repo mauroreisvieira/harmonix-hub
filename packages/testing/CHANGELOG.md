@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.6.0
+
+### Minor Changes
+
+- Update dependencies versions
+
 ## 1.5.2
 
 ### Patch Changes

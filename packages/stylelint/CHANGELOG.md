@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.0
+
+### Minor Changes
+
+- Update dependencies versions
+
 ## 1.3.3
 
 ### Patch Changes

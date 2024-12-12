@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.5.0
+
+### Minor Changes
+
+- Update dependencies versions
+
 ## 1.4.2
 
 ### Patch Changes
@@ -10,7 +16,7 @@
 
 ### Patch Changes
 
-- b35bf9d: update dependecy versions
+- b35bf9d: Update dependencies versions
 
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.

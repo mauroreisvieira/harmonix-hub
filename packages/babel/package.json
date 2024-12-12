@@ -1,6 +1,6 @@
 {
   "name": "@harmonix-hub/babel",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "This package provides Babel configurations to ensuring consistency and collaboration across projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

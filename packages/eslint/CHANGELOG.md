@@ -1,5 +1,15 @@
 # Change Log
 
+## 2.0.0
+
+### Major Changes
+
+- Updated configurations to ensure compatibility with ESLint 9
+
+### Minor Changes
+
+- Update dependencies versions
+
 ## 1.3.7
 
 ### Patch Changes
@@ -11,7 +21,7 @@
 ### Patch Changes
 
 - b35bf9d: fix: update eslint configuration to support react
-- b35bf9d: update dependecy versions
+- b35bf9d: Update dependencies versions
 
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.

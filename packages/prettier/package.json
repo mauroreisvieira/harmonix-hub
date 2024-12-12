@@ -1,6 +1,6 @@
 {
   "name": "@harmonix-hub/prettier",
-  "version": "1.3.4",
+  "version": "1.4.0",
   "description": "This package provides Prettier configurations to ensuring consistency and collaboration across projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
