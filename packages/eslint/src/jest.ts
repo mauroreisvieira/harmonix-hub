@@ -9,11 +9,6 @@ const languageOptions: Linter.Config["languageOptions"] = {
     ...globals.browser,
     ...globals.node,
     ...globals.jest,
-    it: "readonly",
-    test: "readonly",
-    expect: "readonly",
-    indexedDB: "readonly",
-    describe: "readonly"
   }
 };
 

@@ -32,6 +32,7 @@
     "@harmonix-hub/testing": "workspace:*",
     "@harmonix-hub/tsconfig": "workspace:*",
     "@types/eslint": "^9.6.1",
+    "eslint-config-prettier": "^9.1.0",
     "@types/eslint-plugin-jsx-a11y": "^6.10.0",
     "@typescript-eslint/types": "^8.18.0",
     "typescript": "^5.7.2"

@@ -38,6 +38,8 @@ export const tsConfigs: Config = [
     },
     languageOptions,
     rules: {
+      // Allows specifying a type keyword on imports to indicate that the export exists only in the type system, not at runtime.
+      "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
       "array-bracket-newline": ["error", "consistent"],
       "array-bracket-spacing": ["error", "never"],
       "array-callback-return": "error",
@@ -114,6 +116,7 @@ export const tsConfigs: Config = [
           prev: "empty"
         }
       ],
+      "no-multi-spaces": "error",
       "space-before-blocks": "error"
     }
   }
