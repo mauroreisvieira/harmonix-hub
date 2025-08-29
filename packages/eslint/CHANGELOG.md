@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.4
+
+### Patch Changes
+
+- Revert Jest configurations
+
 ## 2.0.2
 
 ### Patch Changes
